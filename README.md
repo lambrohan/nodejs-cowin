@@ -15,7 +15,7 @@ Run as dev server in command line
 
 OR
 
-Run with process manager `pm2`
+Run with process manager pm2 using
 `npm run listen` or `yarn listen`
 
 View pm2 logs by `pm2 logs`
