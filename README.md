@@ -6,6 +6,7 @@ Currently only finds session using `pincode` and `date` & planning to add more l
 ## Usage
 1. Clone this repo
 2. Run `npm install` or `yarn`
+3. Open `index.js` and change variables `pincode` and `date` as per your need and run the script.
 
 
 ### Commands
