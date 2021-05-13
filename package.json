@@ -4,12 +4,11 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
-		"dev": "nodemon index.js"
+		"dev": "nodemon index.js",
+		"listen": "pm2 start index.js"
 	},
 	"dependencies": {
 		"axios": "^0.21.1",
-		"cors": "^2.8.5",
-		"express": "^4.17.1",
 		"node-notifier": "^9.0.1"
 	},
 	"devDependencies": {

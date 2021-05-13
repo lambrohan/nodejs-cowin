@@ -1,10 +1,11 @@
-const express = require('express')
 const notifier = require('node-notifier')
+const pincode = '416001'
+const date = '16-05-2021'
 
 const axios = require('axios').default
 let config = {
 	method: 'get',
-	url: 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=415509&date=13-05-2021',
+	url: `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pincode}&date=${date}`,
 	headers: {
 		'User-Agent': 'PostmanRuntime/7.26.10',
 		Accept: '*/*',
@@ -22,10 +23,10 @@ async function pingVaxServer() {
 				capicity: s.available_capacity,
 			}))
 		)
-		if (data.sessions && data.sessions.length > 1) {
+		if (data.sessions && data.sessions.length) {
 			notifier.notify({
 				title: 'Vaccine Available',
-				message: 'Go and register dawg!',
+				message: 'Go and register!',
 			})
 		}
 	} catch (error) {
